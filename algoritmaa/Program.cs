@@ -54,6 +54,24 @@ namespace Bubble_Sort
         {
             for (int i = 1; i < n; i++)  // For n - 1 passes
             {
-
+                // Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                for (int j = 0, j < n - i; j++)
+                {
+                    if (a[j] > a[j + 1]) // Jika elemen tidak dalam urutan yang benar
+                    {
+                        // Tukar elemen
+                        int temp;
+                        temp = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = temp;
+                    }
+                }
             }
+        }
+        
+        static void Main(string[] args)
+        {
+            // Creating the object of the Bubblesort class
+            Program myList = new Program();
+
         }
